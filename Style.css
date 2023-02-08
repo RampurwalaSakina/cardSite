@@ -1,0 +1,478 @@
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+/* Box sizing rules */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  --primary-color:darkcyan;
+  --secondary-color:rgb(0, 110, 255);
+  --text-color:rgb(245, 245, 220);
+  --circle-color:rgba(245,245,220,0.5);
+  --font-family: 'Open Sans', sans-serif;
+  --font-weight-strong: 400;
+}
+
+body {
+  padding: 15px;
+  background-size: contain;
+  background-attachment: fixed;
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+}
+
+.cake {
+  position: absolute;
+  top: 0%;
+  left: 5%;
+}
+
+.cake2 {
+  position: absolute;
+  top: 40%;
+  left: -5%;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+.bold {
+  font-weight: 800;
+}
+
+.banner {
+  text-align: center;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  padding: 15px 0px;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  position: relative;
+  top: -100vh;
+  -webkit-animation: moveDown 2s 0s 1 forwards;
+          animation: moveDown 2s 0s 1 forwards;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 10vh;
+}
+
+.chatbox.right {
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 80%;
+  padding: 10px;
+  color: var(--text-color);
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 10px 0px;
+  position: relative;
+  opacity: 0;
+  z-index: 1;
+}
+
+.chatbox.right::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  top: 0px;
+  border: 10px solid var(--primary-color);
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+}
+
+.chatbox.left {
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 80%;
+  padding: 10px;
+  color: var(--text-color);
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: 10px 0px;
+  position: relative;
+  opacity: 0;
+}
+
+.chatbox.left::after {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 0px;
+  border: 10px solid var(--primary-color);
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+.img {
+  max-width: 100%;
+}
+
+.img-2 {
+  display: inline;
+  max-width: 60px;
+}
+
+.contact {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 10px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  opacity: 0;
+}
+
+.contact span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.show {
+  -webkit-animation: moveUp 1s 0s 1 forwards;
+          animation: moveUp 1s 0s 1 forwards;
+}
+
+iframe {
+  max-width: 100%;
+  height: 50%;
+}
+
+@-webkit-keyframes moveDown {
+  0% {
+    top: -100vh;
+  }
+  100% {
+    top: 0vh;
+  }
+}
+
+@keyframes moveDown {
+  0% {
+    top: -100vh;
+  }
+  100% {
+    top: 0vh;
+  }
+}
+
+@-webkit-keyframes moveUp {
+  0% {
+    bottom: -50px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    bottom: -50px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+  // max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@import 'reset';
+@import 'setup';
+@import 'fonts';
+
+body{
+    padding: 15px;
+    // background-color: var(--text-color);
+    background: url("bgimage.jpeg");
+    background-size: contain;
+    background-attachment: fixed;
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+}
+.cake{
+    position: absolute;
+    top:0%;
+    left: 5%;
+}
+.cake2{
+    position: absolute;
+    top:40%;
+    left: -5%;
+    transform: scaleX(-1);
+}
+.bold{
+    font-weight: 800;
+}
+.banner{
+    text-align: center;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    padding: 15px 0px;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    position: relative;
+    top: -100vh;
+    animation: moveDown 2s 0s 1 forwards;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10vh;
+}
+.chatbox.right{
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    width: max-content;
+    max-width: 80%;
+    padding: 10px;
+    color: var(--text-color);
+    align-self:flex-end;
+    margin: 10px 0px;
+    position: relative;
+    opacity: 0;
+    z-index: 1;
+    &::after{
+        content:'';
+        position: absolute;
+        right: -10px;
+        top:0px;
+        border:10px solid var(--primary-color);
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+    }
+    // &:nth-child(2){
+    //     &::before{
+    //         content:'';
+    //         background-image: url('cake.png');
+    //         background-size: contain;
+    //         background-repeat: no-repeat;
+    //         position: absolute;
+    //         width: 40%;
+    //         height: 40%;
+    //         top: 50%;
+    //         left: -30%;
+    //         transform: translateY(-50%);
+    //         z-index: -2;
+    //     }
+    // }
+}
+.chatbox.left{
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    width: max-content;
+    max-width: 80%;
+    padding: 10px;
+    color: var(--text-color);
+    align-self:flex-start;
+    margin: 10px 0px;
+    position: relative;
+    opacity: 0;
+    &::after{
+        content:'';
+        position: absolute;
+        left: -10px;
+        top:0px;
+        border:10px solid var(--primary-color);
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+}
+
+.img{
+    max-width: 100%;
+}
+.img-2{
+    display: inline;
+    max-width: 60px;
+}
+.contact{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    text-decoration: none;
+    opacity: 0;
+        span{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+}
+a{
+    text-decoration: none;
+}
+.show{
+    animation: moveUp 1s 0s 1 forwards;
+}
+iframe{
+    max-width: 100%;
+    height: 50%;
+}
+@keyframes moveDown {
+    0%{
+        top:-100vh;
+    }    
+    100%{
+        top:0vh;
+    }
+}
+@keyframes moveUp {
+    0%{
+        bottom:-50px;
+        opacity: 0;
+    }    
+    100%{
+        bottom: 0px;
+        opacity: 1;
+    }
+}
+
+/*# sourceMappingURL=style.css.map */
